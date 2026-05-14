@@ -1,0 +1,19 @@
+.contenedor-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+.contenedor-grid > div{
+    background-color: white;
+    padding: 15px;
+}
+.header{
+    background-color: #333 !important;
+    color: white;
+    font-weight: bold;
+}
+.estilo{
+    background-color: aqua;
+}

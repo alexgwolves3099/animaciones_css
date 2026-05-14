@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigacion Animaciones con CSS, Transiciones y Transformaicones</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="estilo">
+    <header>
+        <h1 style="text-align: center;">Animaciones con CSS, Transiciones y Transformaciones</h1>
+    </header>
+    <main>
+        <h2>1. ¿Qué son las animaciones en CSS?</h2>
+        <h3>Definición</h3>
+        <p>
+            Las animaciones en CSS son una técnica que permite que los elementos HTML cambien gradualmente de un estilo
+            a otro. A diferencia de un cambio estático (como que un botón sea rojo y pase a ser azul instantáneamente),
+            la animación crea estados intermedios para que el cambio sea fluido y visualmente atractivo.
+        </p>
+        <h3>Ventajas y usos principales</h3>
+        <p>
+        <ul>
+            <li>Interactividad: Mejoran la experiencia del usuario (UX) al dar feedback visual.</li>
+            <li>Rendimiento: Son procesadas por el navegador (a menudo usando la GPU), lo que las hace más ligeras que
+                las animaciones hechas con JavaScript.</li>
+            <li>Retención visual: Ayudan a guiar la atención del usuario hacia elementos importantes como botones de
+                "Llamada a la acción" o notificaciones.</li>
+        </ul>
+        <h3>Conclusión Personal:</h3>
+        <p>Las animaciones no son solo adornos; son herramientas de comunicación que hacen que una interfaz se sienta
+            "viva" y profesional, siempre que se usen con moderación para no saturar al usuario.</p>
+        </p>
+        <h2>2. Transiciones en CSS</h2>
+        <h3>Propiedad transition</h3>
+        <p>
+            La transición permite cambiar los valores de las propiedades de CSS de forma suave, durante una duración
+            específica. Se activan generalmente mediante una pseudo-clase como :hover.
+        </p>
+        <h3>Parámetros principales:</h3>
+        <p>
+        <ul>
+            <li>transition-property: Indica el nombre de la propiedad CSS que se va a transicionar (ej:
+                background-color, width, all).</li>
+            <li>transition-duration: Define cuánto tiempo tarda en completarse la transición (ej: 0.5s).</li>
+            <li>transition-timing-function: Especifica la curva de velocidad (ej: ease, linear, ease-in-out).</li>
+            <li>transition-delay: Define un tiempo de espera antes de que comience la transición.</li>
+        </ul>
+        <h3>Ejemplo de uso:</h3>
+        <img src="imagenes/transition.png" alt="transition image">
+        <h3>Conclusión Personal:</h3>
+        <p>
+            Las transiciones son la forma más sencilla de añadir elegancia a un sitio web. Son ideales para cambios de
+            estado binarios (encendido/apagado, dentro/fuera).
+        </p>
+        </p>
+        <h2>3. Transformaciones en CSS</h2>
+        <h3>Propiedad transform</h3>
+        <p>
+            Esta propiedad permite modificar la forma y posición de un elemento en un espacio 2D o 3D sin alterar el flujo normal del documento.
+        </p>
+        <h3>Tipos de transformaciones:</h3>
+        <ul>
+            <li>translate(x, y): Desplaza el elemento desde su posición original.</li>
+            <li>rotate(angle): Gira el elemento un número determinado de grados (ej: 45deg).</li>
+            <li>scale(x, y): Aumenta o disminuye el tamaño del elemento.</li>
+            <li>skew(x-angle, y-angle): Inclina el elemento a lo largo de los ejes X e Y.</li>
+        </ul>
+        <h3>Ejemplos:</h3>
+        <img src="imagenes/tipos_de_transformaciones.png" alt="transformaciones">
+        <h3>Aplicaciones prácticas</h3>
+        <p>
+            Se utilizan frecuentemente para centrar elementos absolutamente, crear efectos de zoom en imágenes al pasar el mouse, o crear menús laterales que se deslizan desde fuera de la pantalla.
+        </p>
+        <h3>Conclusión Personal:</h3>
+        <P>
+            Las transformaciones son sumamente potentes porque no afectan a los elementos circundantes (no "empujan" a otros divs), lo que las hace perfectas para efectos visuales complejos sin romper el diseño.
+        </P>
+        <h2>4. Animaciones en CSS</h2>
+        <h3>Propiedad animation</h3>
+        <p>A diferencia de las transiciones, las animaciones pueden ejecutarse automáticamente al cargar la página y tener múltiples estados intermedios.</p>
+        <h3>Uso de @keyframes</h3>
+        <p>
+            Es la regla donde se define el "itinerario" de la animación. Se especifican los estilos en puntos clave (usando porcentajes o las palabras from y to).
+        </p>
+        <h3>Parámetros:</h3>
+        <p>
+            <ul>
+                <li>animation-name: El nombre del @keyframes que se aplicará.</li>
+                <li>animation-duration: Tiempo total del ciclo.</li>
+                <li>animation-iteration-count: Cuántas veces se repite (ej: 3, infinite).</li>
+                <li>animation-delay: Tiempo de espera inicial.</li>
+                <li>animation-direction: Indica si debe ir hacia adelante (normal), hacia atrás (reverse) o alternar ciclos (alternate).</li>
+            </ul>
+            <h3>Ejemplo de uso:</h3>
+            <img src="imagenes/keyframes.png" alt="keyframes image">
+            <h3>Conclusión Personal:</h3>
+            <p>El uso de @keyframes otorga un control total. Es la herramienta definitiva para crear narrativas visuales o indicadores de carga (loaders) personalizados.</p>
+        </p>
+        <h2>5. Diferencias entre transiciones y animaciones</h2>
+
+        <div class="contenedor-grid">
+            <div class="header">Característica</div>
+            <div class="header">Transiciones</div>
+            <div class="header">Animaciones</div>
+
+            <div>Activación</div>
+            <div>Requiere un cambio de estado (ej: :hover).</div>
+            <div>Puede ejecutarse sola al cargar o por eventos.</div>
+
+            <div>Estados</div>
+            <div>Solo dos (inicio y fin).</div>
+            <div>Múltiples estados intermedios con @keyframes.</div>
+
+            <div>Repetición</div>
+            <div>No se repite automáticamente.</div>
+            <div>Puede repetirse infinitamente.</div>
+
+            <div>Complejidad</div>
+            <div>Simple y rápida de implementar.</div>
+            <div>Más compleja, requiere más código.</div>
+        </div>
+
+        <h3>Cuándo utilizar cada una</h3>
+        <p>
+            <ul>
+                <li>Usar <strong>transiciones</strong> para interacciones simples de usuario (botones, enlaces, cambios de color).</li>
+                <li>Usar <strong>animaciones</strong> para efectos continuos (un logo que rebota, un spinner de carga) o cuando el cambio de estilo sea complejo.</li>
+            </ul>
+        </p>
+
+        <h3>Ventajas y Desventajas</h3>
+        <p>
+            <ul>
+               <li><strong>Transiciones:</strong><p>Ventaja: Muy ligeras y fáciles.</p><p>Desventaja: Limitadas a dos estados.</p></li>
+               <li><strong>Animaciones:</strong><p>Ventaja: Gran flexibilidad.</p><p>Desventaja: Pueden consumir más recursos si no se optimizan.</p></li>
+            </ul>
+        </p>
+        <h3>Conclusión Personal:</h3>
+        <p>
+            La clave del éxito en el frontend es saber elegir la herramienta más sencilla que cumpla el objetivo. Lo mejor seria no usar una animación pesada si una transición de 0.2 segundos resuelve el problema.
+        </p>
+
+
+    </main>
+</body>
+
+</html>
